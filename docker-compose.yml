@@ -10,3 +10,11 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     ports:
       - "3306:3306"
+  php-fpm:
+    image: webdevops/php-dev:7.3
+    hostname: php-fpm
+    volumes:
+      - "./:/app"
+    working_dir: "/app"
+    depends_on:
+      - mysql
