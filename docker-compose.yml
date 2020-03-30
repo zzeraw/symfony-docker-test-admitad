@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  mysql:
+    image: mysql:5.7
+    hostname: mysql
+    environment:
+      MYSQL_DATABASE: symfony-docker-test-admitad
+      MYSQL_USER: root
+      # MYSQL_PASSWORD:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    ports:
+      - "3306:3306"
