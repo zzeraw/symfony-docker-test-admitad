@@ -1,1 +1,0 @@
-# symfony-docker-test-admitad
